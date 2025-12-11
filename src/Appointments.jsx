@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { useAuth } from '../contexts/AuthContext';
+import { useAuth } from './AuthContext';
 import { appointmentAPI } from './services/api';
 import { toast } from 'react-hot-toast';
 import {
@@ -11,7 +11,7 @@ import {
   XCircleIcon,
   ClockIcon,
 } from '@heroicons/react/24/outline';
-import AppointmentForm from '../components/Appointments/AppointmentForm';
+import AppointmentForm from './AppointmentForm';
 import { format } from 'date-fns';
 
 const Appointments = () => {
@@ -250,8 +250,8 @@ const Appointments = () => {
                     <div>
                       <div className="text-sm text-gray-500">Payment</div>
                       <div className={`font-medium ${appointment.paymentStatus === 'Paid' ? 'text-green-600' :
-                          appointment.paymentStatus === 'Partial' ? 'text-yellow-600' :
-                            'text-red-600'
+                        appointment.paymentStatus === 'Partial' ? 'text-yellow-600' :
+                          'text-red-600'
                         }`}>
                         {appointment.paymentStatus}
                       </div>

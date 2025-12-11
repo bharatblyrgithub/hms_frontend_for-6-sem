@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { useAuth } from '../contexts/AuthContext';
+import { useAuth } from './AuthContext';
 import { inventoryAPI } from './services/api';
 import { toast } from 'react-hot-toast';
 import {
@@ -11,8 +11,8 @@ import {
   ArrowPathIcon,
   ExclamationTriangleIcon,
 } from '@heroicons/react/24/outline';
-import InventoryForm from '../components/Inventory/InventoryForm';
-import RestockForm from '../components/Inventory/RestockForm';
+import InventoryForm from './InventoryForm';
+import RestockForm from './RestockForm';
 
 const Inventory = () => {
   const { hasRole } = useAuth();
@@ -187,9 +187,9 @@ const Inventory = () => {
                 <p className="text-sm text-gray-500">{item.sku}</p>
               </div>
               <span className={`px-2 py-1 text-xs font-semibold rounded-full ${item.category === 'Medicine' ? 'bg-blue-100 text-blue-800' :
-                  item.category === 'Equipment' ? 'bg-purple-100 text-purple-800' :
-                    item.category === 'Supplies' ? 'bg-green-100 text-green-800' :
-                      'bg-yellow-100 text-yellow-800'
+                item.category === 'Equipment' ? 'bg-purple-100 text-purple-800' :
+                  item.category === 'Supplies' ? 'bg-green-100 text-green-800' :
+                    'bg-yellow-100 text-yellow-800'
                 }`}>
                 {item.category}
               </span>

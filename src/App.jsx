@@ -6,15 +6,15 @@ import ProtectedRoute from "./ProtectedRoute.jsx";
 import Layout from "./Layout.jsx";
 
 // Lazy loaded pages
-const Login = lazy(() => import("./Login"));
-const Register = lazy(() => import("./Register"));
-const Dashboard = lazy(() => import("./Dashboard"));
-const Patients = lazy(() => import("./Patients"));
-const Doctors = lazy(() => import("./Doctors"));
-const Appointments = lazy(() => import("./Appointments"));
-const Billing = lazy(() => import("./Billing"));
-const Inventory = lazy(() => import("./Inventory"));
-const Reports = lazy(() => import("./Reports"));
+const Login = lazy(() => import("./Login.jsx"));
+const Register = lazy(() => import("./Register.jsx"));
+const Dashboard = lazy(() => import("./Dashboard.jsx"));
+const Patients = lazy(() => import("./Patients.jsx"));
+const Doctors = lazy(() => import("./Doctors.jsx"));
+const Appointments = lazy(() => import("./Appointments.jsx"));
+const Billing = lazy(() => import("./Billing.jsx"));
+const Inventory = lazy(() => import("./Inventory.jsx"));
+const Reports = lazy(() => import("./Reports.jsx"));
 
 const LoadingSpinner = () => (
   <div className="flex justify-center items-center h-screen">

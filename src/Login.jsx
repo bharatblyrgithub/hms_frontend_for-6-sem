@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useAuth } from '../contexts/AuthContext';
-import { HospitalIcon } from '../components/Icons';
+import { useAuth } from './AuthContext';
+import { HospitalIcon } from './Icons';
 
 const Login = () => {
   const [email, setEmail] = useState('');

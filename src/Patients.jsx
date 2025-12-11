@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { useAuth } from '../contexts/AuthContext';
+import { useAuth } from './AuthContext';
 import { patientAPI } from './services/api';
 import { toast } from 'react-hot-toast';
 import {
@@ -10,7 +10,7 @@ import {
   EyeIcon,
   UserPlusIcon,
 } from '@heroicons/react/24/outline';
-import PatientForm from '../components/Patients/PatientForm';
+import PatientForm from './PatientForm';
 
 const Patients = () => {
   const { hasRole } = useAuth();

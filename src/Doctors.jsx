@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { useAuth } from '../contexts/AuthContext';
+import { useAuth } from './AuthContext';
 import { doctorAPI } from './services/api';
 import { toast } from 'react-hot-toast';
 import {
@@ -11,7 +11,7 @@ import {
   ClockIcon,
   StarIcon,
 } from '@heroicons/react/24/outline';
-import DoctorForm from '../components/Doctors/DoctorForm';
+import DoctorForm from './DoctorForm';
 
 const Doctors = () => {
   const { hasRole } = useAuth();
@@ -206,12 +206,12 @@ const Doctors = () => {
               <div className="flex justify-between items-center">
                 <div>
                   <span className={`px-2 py-1 text-xs font-semibold rounded-full ${getExperienceLevel(doctor.experience) === 'Expert'
-                      ? 'bg-purple-100 text-purple-800'
-                      : getExperienceLevel(doctor.experience) === 'Senior'
-                        ? 'bg-blue-100 text-blue-800'
-                        : getExperienceLevel(doctor.experience) === 'Mid-level'
-                          ? 'bg-green-100 text-green-800'
-                          : 'bg-yellow-100 text-yellow-800'
+                    ? 'bg-purple-100 text-purple-800'
+                    : getExperienceLevel(doctor.experience) === 'Senior'
+                      ? 'bg-blue-100 text-blue-800'
+                      : getExperienceLevel(doctor.experience) === 'Mid-level'
+                        ? 'bg-green-100 text-green-800'
+                        : 'bg-yellow-100 text-yellow-800'
                     }`}>
                     {getExperienceLevel(doctor.experience)}
                   </span>

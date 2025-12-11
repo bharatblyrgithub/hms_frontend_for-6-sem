@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useAuth } from '../contexts/AuthContext';
-import { HospitalIcon } from '../components/Icons';
+import { useAuth } from './AuthContext';
+import { HospitalIcon } from './Icons';
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -25,12 +25,12 @@ const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     if (formData.password !== formData.confirmPassword) {
       alert('Passwords do not match');
       return;
     }
-    
+
     setLoading(true);
     const result = await register({
       name: formData.name,
@@ -40,7 +40,7 @@ const Register = () => {
       phoneNumber: formData.phoneNumber
     });
     setLoading(false);
-    
+
     if (result.success) {
       navigate('/dashboard');
     }

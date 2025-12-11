@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { useAuth } from '../contexts/AuthContext';
+import { useAuth } from './AuthContext';
 import { billingAPI } from './services/api';
 import { toast } from 'react-hot-toast';
 import {
@@ -12,8 +12,8 @@ import {
   PrinterIcon,
   CreditCardIcon,
 } from '@heroicons/react/24/outline';
-import BillForm from '../components/Billing/BillForm';
-import PaymentForm from '../components/Billing/PaymentForm';
+import BillForm from './BillForm';
+import PaymentForm from './PaymentForm';
 import { format } from 'date-fns';
 
 const Billing = () => {

@@ -1,9 +1,8 @@
-/* eslint-disable */
-/* Tailwind Directives */
-/* eslint-disable */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Tailwind CSS v4 */
+@import "tailwindcss";
+
+/* Tell Tailwind where to find classes */
+@source "../**/*.{js,jsx,ts,tsx,html}";
 
 /* Custom Variables */
 :root {

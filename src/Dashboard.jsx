@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useAuth } from '../contexts/AuthContext';
+import { useAuth } from './AuthContext';
 import { patientAPI, doctorAPI, appointmentAPI, billingAPI, inventoryAPI } from './services/api';
 import {
   UserGroupIcon,
