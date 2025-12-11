@@ -1,0 +1,137 @@
+/* eslint-disable */
+/* Tailwind Directives */
+/* eslint-disable */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Variables */
+:root {
+  --primary-color: #2563eb; /* Tailwind blue-600 */
+  --secondary-color: #6b7280; /* Tailwind gray-500 */
+  --bg-color: #f4f7fb;
+  --card-color: #ffffff;
+  --border-radius: 12px;
+}
+
+/* Global Styles */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: #1f2937; /* Tailwind gray-800 */
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #111827; /* Tailwind gray-900 */
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Input Fields */
+.input-field {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db; /* Tailwind gray-300 */
+  border-radius: var(--border-radius);
+  background-color: var(--card-color);
+  font-size: 0.875rem; /* Tailwind text-sm */
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input-field:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 1px var(--primary-color);
+}
+
+/* Labels */
+.label {
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: var(--secondary-color);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8; /* Slightly darker blue */
+}
+
+.btn-secondary {
+  background-color: #e5e7eb; /* Tailwind gray-200 */
+  color: #374151; /* Tailwind gray-700 */
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-secondary:hover {
+  background-color: #d1d5db; /* Tailwind gray-300 */
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+
+th {
+  font-size: 0.75rem; /* Tailwind text-xs */
+  color: #6b7280; /* Tailwind gray-500 */
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+td {
+  font-size: 0.875rem; /* Tailwind text-sm */
+  color: #374151; /* Tailwind gray-700 */
+}
+
+/* Border & Card Utilities */
+.border {
+  border: 1px solid #d1d5db; /* Tailwind gray-300 */
+}
+
+.rounded-md {
+  border-radius: var(--border-radius);
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+/* Miscellaneous */
+.space-y-2 > * + *,
+.space-y-4 > * + * {
+  margin-top: 0.5rem; /* 2 = 0.5rem, 4 = 1rem */
+}
